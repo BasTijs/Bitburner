@@ -24,3 +24,9 @@ run scan.js (makes a map of all servers with info. Seems a bit buggy but works. 
 ## Focus:
 Upgrade your home pc for more memory, make programs, faction reputation for new augments. Focus on a single faction and buy the most expensive one first, as it gets more and more expansive. Install after 10-15 new augments, because it will reset your game, but with the scripts it is easy to restart.
 After that focus on getting Tor, connect to darkweb and start buying programs instead of creating them.
+
+# Alias
+
+Here is a nice trick using alias to buy all hack tools (TOR required) for early game when you can make quick money but dont have access to advanced functions yet:
+
+alias buyhacks="home; connect darkweb; buy BruteSSH.exe; buy FTPCrack.exe; buy relaySMTP.exe; buy HTTPWorm.exe; buy SQLInject.exe; home;"
