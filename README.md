@@ -9,7 +9,7 @@ https://github.com/moriakaice/bitburner/tree/master/src
 
 run runHacking (main script that hacks servers, makes money and purchaces and upgrades new servers)
 
-run HackNet (only profitable for long games, not if you install augments often)
+run HackNet (Uprades HackNet, only profitable for long games, not if you install augments often)
 
 run stock-trader (not tested much but it makes a profit, game needs to be active so no offline)
 
