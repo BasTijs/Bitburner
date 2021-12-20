@@ -1,5 +1,6 @@
 const filesToDownload = [
   'common.ns',
+  'connect.js',  
   'find.ns',
   'grow.ns',
   'hack.ns',
@@ -8,7 +9,7 @@ const filesToDownload = [
   'mainHack.ns',
   'playerServers.ns',
   'runHacking.ns',
-  'scan.ns',
+  'scan.js',
   'spider.ns',
   'stock-trader.ns',
   'weaken.ns',
