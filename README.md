@@ -5,6 +5,10 @@ Welcome to my log of [Bitburner](https://danielyxie.github.io/bitburner/) script
 Collection from various sources that worked for me as a beginner, main sources are reddit for the HackNet.ns, scan.js and stock-trader.ns. All others are from the follow, but fixed for the steam version 1.2:
 https://github.com/moriakaice/bitburner/tree/master/src
 
+## Installation
+
+Copy the contents of install.ns to a new file in your game editor and run it. This will download everything.
+
 ## Commands for main hacking/money making method early game:
 
 run runHacking (main script that hacks servers, makes money and purchaces and upgrades new servers)
