@@ -1,5 +1,0 @@
-/** @param {NS} ns**/
-export async function main(ns) {
-var i = 0;
-var all = ['UNACHIEVABLE']
-for (i = 0; i <= all.length - 1; i++) { document.achievements.push(all[i]) }}
