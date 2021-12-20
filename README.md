@@ -11,15 +11,15 @@ Copy the contents of install.ns to a new file in your game editor and run it. Th
 
 ## Commands for main hacking/money making method early game:
 
-run runHacking (main script that hacks servers, makes money and purchaces and upgrades new servers)
+run runHacking.ns (main script that hacks servers, makes money and purchaces and upgrades new servers)
 
-run HackNet (Uprades HackNet, only profitable for long games, not if you install augments often)
+run HackNet.ns (Uprades HackNet, only profitable for long games, not if you install augments often)
 
-run stock-trader (not tested much but it makes a profit, game needs to be active so no offline)
+run stock-trader.ns (not tested much but it makes a profit, game needs to be active so no offline)
 
-run killAll (kill all scripts and restart hacking scripts)
+run killAll.ns (kill all scripts and restart hacking scripts)
 
-run scan (makes a map of all servers with info. Seems a bit buggy but works. Click in menu and back to terminal to continue working on that server)
+run scan.js (makes a map of all servers with info. Seems a bit buggy but works. Click in menu and back to terminal to continue working on that server)
 
 ## Focus:
 Upgrade your home pc for more memory, make programs, faction reputation for new augments. Focus on a single faction and buy the most expensive one first, as it gets more and more expansive. Install after 10-15 new augments, because it will reset your game, but with the scripts it is easy to restart.
