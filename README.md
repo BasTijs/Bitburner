@@ -2,7 +2,7 @@
 
 Welcome to my log of [Bitburner](https://danielyxie.github.io/bitburner/) scripts.
 
-Collection from various sources that worked for me as a beginner, main sources are reddit for the HackNet.ns, scan.js and stock-trader.ns. All others are from the follow, but fixed for the steam version 1.2:
+Collection from various sources that worked for me as a beginner, main sources are reddit for the HackNet.ns, scan.js, server_costs.js and stock-trader.ns. All others are from the follow, but fixed for the steam version 1.2:
 https://github.com/moriakaice/bitburner/tree/master/src
 
 ## Installation
@@ -20,6 +20,8 @@ run stock-trader.ns (not tested much but it makes a profit, game needs to be act
 run killAll.ns (kill all scripts and restart hacking scripts)
 
 run scan.js (makes a map of all servers with info. Seems a bit buggy but works. Click in menu and back to terminal to continue working on that server)
+
+run server_costs.js (overview of upgrading costs servers)
 
 ## Focus:
 Upgrade your home pc for more memory, make programs, faction reputation for new augments. Focus on a single faction and buy the most expensive one first, as it gets more and more expansive. Install after 10-15 new augments, because it will reset your game, but with the scripts it is easy to restart.
