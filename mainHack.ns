@@ -1,8 +1,11 @@
 const settings = {
-  homeRamReserved: 64,
-  homeRamReservedBase: 64,
+  homeRamReserved: 20,
+  homeRamReservedBase: 20,
   homeRamExtraRamReserved: 12,
-  homeRamBigMode: 64,
+  homeRamMedMode: 64,
+  homeRamBigMode: 256,
+  limitHackLevelStart: 50,
+  limitHackLevelMedMode: 100,
   minSecurityLevelOffset: 1,
   maxMoneyMultiplayer: 0.9,
   minSecurityWeight: 100,
@@ -118,11 +121,25 @@ async function getHackableServers(ns, servers) {
 function findTargetServer(ns, serversList, servers, serverExtraData) {
   const playerDetails = getPlayerDetails(ns)
 
-  serversList = serversList
-    .filter((hostname) => servers[hostname].hackingLevel <= playerDetails.hackingLevel)
-    .filter((hostname) => servers[hostname].maxMoney)
-    .filter((hostname) => hostname !== 'home')
-    .filter((hostname) => ns.getWeakenTime(hostname) < settings.maxWeakenTime)
+  if (servers.home.ram >= settings.homeRamBigMode){
+    serversList = serversList
+      .filter((hostname) => servers[hostname].hackingLevel <= playerDetails.hackingLevel)
+      .filter((hostname) => servers[hostname].maxMoney)
+      .filter((hostname) => hostname !== 'home')
+      .filter((hostname) => ns.getWeakenTime(hostname) < settings.maxWeakenTime)
+  } else if (servers.home.ram >= settings.homeRamMedMode){
+    serversList = serversList
+      .filter((hostname) => servers[hostname].hackingLevel <= settings.limitHackLevelMedMode)
+      .filter((hostname) => servers[hostname].maxMoney)
+      .filter((hostname) => hostname !== 'home')
+      .filter((hostname) => ns.getWeakenTime(hostname) < settings.maxWeakenTime)
+  } else {
+    serversList = serversList
+      .filter((hostname) => servers[hostname].hackingLevel <= settings.limitHackLevelStart)
+      .filter((hostname) => servers[hostname].maxMoney)
+      .filter((hostname) => hostname !== 'home')
+      .filter((hostname) => ns.getWeakenTime(hostname) < settings.maxWeakenTime)
+  }
 
   let weightedServers = serversList.map((hostname) => {
     const fullHackCycles = Math.ceil(100 / Math.max(0.00000001, ns.hackAnalyze(hostname)))
