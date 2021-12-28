@@ -7,14 +7,14 @@ export const main = async function (ns) {
 const object_get_constants = function(ns) {
   // a lot of these are from https://github.com/danielyxie/bitburner/blob/master/src/Constants.js
   // can replace `55e3` with `ns.getPurchasedServerCost(1)`
-  const BaseCostFor1GBOfRamServer = 55e3;
+  const BaseCostFor1GBOfRamServer = ns.getPurchasedServerCost(1);
   // can replace `1048576` with `ns.getPurchasedServerMaxRam()`
   const PurchasedServerMaxRam = 1048576;
   return {
     BaseCostFor1GBOfRamServer: BaseCostFor1GBOfRamServer,
     integer_server_ram_min: 2,
     PurchasedServerMaxRam: PurchasedServerMaxRam,
-    integer_server_cost_max: BaseCostFor1GBOfRamServer * PurchasedServerMaxRam,
+    integer_server_cost_max: ns.getPurchasedServerCost(PurchasedServerMaxRam),
     string_column_title_1: "RAM (GB)",
     string_column_title_2: "Long Cost ($)",
     string_column_title_3: "Short Cost ($)",
@@ -40,7 +40,7 @@ const string_get_number_abbreviated = function (float_number) {
 const string_line = function (ns, integer_ram) {
   const
     object_constants = object_get_constants(ns),
-    integer_cost = object_constants.BaseCostFor1GBOfRamServer * integer_ram
+    integer_cost = ns.getPurchasedServerCost(integer_ram)
   return `${
     integer_ram
     .toString()
