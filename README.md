@@ -5,6 +5,9 @@ Welcome to my log of [Bitburner](https://danielyxie.github.io/bitburner/) script
 Collection from various sources that worked for me as a beginner, main sources are reddit for the HackNet.ns, scan.js, server_costs.js and stock-trader.ns. All others are from the follow, but fixed for the steam version 1.2:
 https://github.com/moriakaice/bitburner/tree/master/src
 
+After BN1, I switched to using the awesome code from Alain Bryden, which should be pretty newbie friendly also but change the host-manager settings (reservedMoneyPercent, reserve-percent, utilization-trigger) to spend more money:
+https://github.com/alainbryden/bitburner-scripts
+
 ## Installation
 
 Copy the contents of install.ns to a new file in your game editor and run it. This will download everything.
